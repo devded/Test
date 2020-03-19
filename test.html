@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+   async function check(){
+       let url = 'http://10.16.100.244/';
+    let response = await fetch(url);
+
+    if (response.ok) { // if HTTP-status is 200-299
+    // get the response body (the method explained below)
+    //let json = await response.json();
+    alert("dedar")
+    } else {
+    alert("HTTP-Error: " + response.status);
+    }
+   }
+
+   check();
+</script>
