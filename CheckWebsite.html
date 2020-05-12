@@ -16,12 +16,13 @@
 
 <script>
 	async function check(url){
-        let cors = "https://cors-anywhere.herokuapp.com/";
-        let checkUrl= cors+url;
-        let response = await fetch(checkUrl);
+        let cors = "https://cors-anywhere.herokuapp.com/";  //This API enables cross-origin requests to anywhere.
+
+        let checkUrl= cors+url;         //Add cors and checking website url this solve the cross-origin requests error             
+        let response = await fetch(checkUrl);           //JavaScript can send network requests to the server
 
         if (response.ok) { // if HTTP-status is 200-299
-            alert("Website Support On Your Network");
+            alert("Website Support On Your Network");         
         } else {
             alert("Website Not Support On Your Network");
         }
