@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+	async function check(url){
+        let cors = "https://cors-anywhere.herokuapp.com/
+        let checkUrl= cors+url;
+        let response = await fetch(checkUrl);
+
+        if (response.ok) { // if HTTP-status is 200-299
+            alert("Website Support On Your Network");
+        } else {
+            alert("Website Not Support On Your Network");
+        }
+
+   }
+
+   check("https://www.youtube.com/");
+</script>
